@@ -1,0 +1,24 @@
+# Claude Code
+.claude-cache/
+.claude-config/
+.amp-cache/
+.amp-config/
+tasks/
+
+# Ralph
+progress.txt
+prd.json
+archive/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+build.ps1
