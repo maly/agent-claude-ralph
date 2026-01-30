@@ -20,4 +20,11 @@ if [ ! -d "$HOME/.claude/skills/ralph" ]; then
     cp -r "$HOME/.local/share/ralph/skills/ralph" "$HOME/.claude/skills/"
 fi
 
+# Install dev-browser plugin if not present
+if ! claude plugin list 2>/dev/null | grep -q "dev-browser"; then
+    echo "Installing dev-browser plugin..."
+    claude plugin marketplace add sawyerhood/dev-browser || true
+    claude plugin install dev-browser@dev-browser-marketplace || true
+fi
+
 exec "$@"

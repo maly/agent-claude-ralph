@@ -10,6 +10,7 @@ A Docker image combining **Claude Code CLI** with **Ralph** - an autonomous agen
 - 🤖 **Claude Code CLI** - Anthropic's AI-powered coding assistant
 - 📋 **Ralph** - Autonomous agent for breaking down and executing complex tasks
 - 📝 **Built-in Skills** - PRD creation and Ralph format conversion
+- 🌐 **Playwright + dev-browser** - Headless browser testing with the [dev-browser](https://github.com/SawyerHood/dev-browser) skill
 - 🔧 **Pre-configured** - Ready to use with OpenRouter (customizable)
 
 ## Prerequisites
