@@ -6,6 +6,7 @@
 tasks/
 
 # Ralph
+.ralph/
 progress.txt
 prd.json
 archive/

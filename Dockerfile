@@ -68,11 +68,8 @@ ENV PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/.bun/bin:${HOME}/bin:${P
 # Claude Code CLI (installs to ~/.local/bin)
 RUN curl -fsSL https://claude.ai/install.sh | bash
 
-# Ralph – clone and create alias
-RUN mkdir -p ${HOME}/.local/share \
-  && git clone --depth=1 https://github.com/snarktank/ralph ${HOME}/.local/share/ralph \
-  && chmod +x ${HOME}/.local/share/ralph/ralph.sh \
-  && echo 'alias ralph="${HOME}/.local/share/ralph/ralph.sh --tool claude"' >> ${HOME}/.bashrc
+# Ralph alias (installation happens in entrypoint.sh to preserve mounted volume)
+RUN echo 'alias ralph="${HOME}/.local/share/ralph/ralph.sh --tool claude"' >> ${HOME}/.bashrc
 
 # Optional: show tool versions in build output (won't fail if something doesn't print)
 RUN (command -v claude && claude --version) || true \
