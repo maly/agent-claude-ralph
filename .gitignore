@@ -23,3 +23,4 @@ Thumbs.db
 .vscode/
 
 build.ps1
+build-amp.ps1
